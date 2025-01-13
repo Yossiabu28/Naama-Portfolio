@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Editing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+         <li><a href="Home.html">Home</a></li> 
+         <li><a href="Video.html">Video Editing</a></li>
+         <li><a href="Art.html">Art Design</a></li>
+         <li><a href="CostumeDesgine.html">Costume Design</a></li> 
+         <li><a href="#" onclick="openModal()">Contact Us</a></li>
+     </ul>
+   </nav>
+  </header>
+
+
+<!-- HTML Contact Form -->
+<div id="contactModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone:</label><br>
+      <input type="text" id="phone" name="phone"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <section class="Video">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+        <p>Description of Project 1.</p>
+      </div>
+      <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p>Description of Project 2.</p>
+      </div>
+      <!-- Add more projects as needed -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Namma Melzer - All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

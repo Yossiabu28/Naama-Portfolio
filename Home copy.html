@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+       <ul>
+          <li><a href="Home.html">Home</a></li> 
+          <li><a href="Video.html">Video Editing</a></li>
+          <li><a href="Art.html">Art Design</a></li>
+          <li><a href="CostumeDesgine.html">Costume Design</a></li> 
+          <li><a href="#" onclick="openModal()">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+<head>
+</head>
+  
+
+<!-- HTML Contact Form -->
+<div id="contactModal" style="display: none;">
+  <div class="modal-content">
+    <span onclick="closeModal()">&times;</span>
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone:</label><br>
+      <input type="text" id="phone" name="phone"><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" required></textarea><br><br>
+
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+  <section class="Naama">
+    <h1>Naama Melzer</h1>
+      <h2>Video Editor</h2>
+      <h3>Art & Costume Design</h3>
+  </section>
+
+
+  <!-- Photo Gallery Section -->
+  <section class="gallery-section">
+    <h2>My Work Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 1">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 2">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 3">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 4">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 5">
+      </div>
+      <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Gallery Image 6">
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer>
+    <p>&copy; Naama Melzer - All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
