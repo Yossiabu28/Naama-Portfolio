@@ -87,7 +87,7 @@ const gallerySlide = document.querySelector('.gallery-slide');
 const galleryContainer = document.querySelector('.gallery-container');
 
 // Set the width of .gallery-slide based on the number of images
-gallerySlide.style.width = `${totalImages * 100}%`;  // Total width for all images
+// gallerySlide.style.width = `${totalImages * 100}%`;  // Total width for all images
 
 // Event listeners for the buttons
 document.querySelector('.prev').addEventListener('click', () => {
