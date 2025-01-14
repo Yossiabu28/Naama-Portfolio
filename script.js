@@ -1,40 +1,64 @@
-function openModal() {
-  document.getElementById('contactModal').style.display = 'block';
-}
+document.addEventListener('DOMContentLoaded', () => {
+  // Initialize gallery state
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.gallery-slide img');  // Get all the images in the gallery
+  const totalImages = images.length;  // Get the total number of images
+  const gallerySlide = document.querySelector('.gallery-slide');  // The container that holds the images
+  const galleryContainer = document.querySelector('.gallery-container');  // The container that holds the gallery and buttons
 
-// function closeModal() {
-//   document.getElementById('contactModal').style.display = 'none';
-// }
+  // Ensure gallery is not empty
+  if (totalImages === 0) return;
 
-
-// Open the Photo Gallery Modal
-function openPhotoModal() {
-  document.getElementById('photoModal').style.display = 'block';
-}
-
-// Open the Video Gallery Modal
-function openVideoModal() {
-  document.getElementById('videoModal').style.display = 'block';
+// Function to update the gallery
+function updateGallery() {
+  gallerySlide.style.transform = `translateX(-${currentIndex * galleryContainer.offsetWidth}px)`;  
 }
 
 
-// Close the modals
-function closeModal(modalId) {
-  document.getElementById(modalId).style.display = 'none';
-}
-
-
-
-// Close the modal if clicked outside of the modal content
-window.onclick = function(event) {
-  if (event.target == document.getElementById("contactModal")) {
-    closeModal('contactModal');
-  } else if (event.target == document.getElementById("photoModal")) {
-    closeModal('photoModal');
-  } else if (event.target == document.getElementById("videoModal")) {
-    closeModal('videoModal');
+  // Event listener for the 'Previous' button
+  const prevButton = document.querySelector('.prev');
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;  // Move to the previous image
+      updateGallery();
+    });
   }
-}
+
+  // Event listener for the 'Next' button
+  const nextButton = document.querySelector('.next');
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;  // Move to the next image
+      updateGallery();
+    });
+  }
+
+  // Optional: Add swipe functionality (for mobile devices)
+  let startX = 0;
+  let endX = 0;
+
+  galleryContainer.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;  // Store the starting touch position
+  });
+
+  galleryContainer.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;  // Store the ending touch position
+
+    if (startX - endX > 50) {  // Swipe left (next image)
+      currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+      updateGallery();
+    } else if (endX - startX > 50) {  // Swipe right (previous image)
+      currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+      updateGallery();
+    }
+  });
+
+  // Initial gallery update to show the first image
+  updateGallery();
+});
+
+
+
 
 
 // Initialize EmailJS (replace 'your_user_id' with your actual user ID)
@@ -64,43 +88,34 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     .then(function(response) {
       console.log('Email sent successfully!', response);
       
-      // Close the modal after successful email submission
-      closeModal();
+      // Display success message in the popup modal
+      document.getElementById('statusMessage').innerText = 'Thank you for your message! We will get back to you soon.';
+      document.getElementById('statusModal').style.display = 'block';
 
       // Optionally reset the form after submission
       document.getElementById('contact-form').reset();
-
-
+      
+      // Close the modal automatically after 3 seconds
+      setTimeout(function() {
+        document.getElementById('statusModal').style.display = 'none';
+      }, 3000);
     })
     .catch(function(error) {
       console.error('Error sending email:', error);
+      
+      // Display error message in the popup modal
+      document.getElementById('statusMessage').innerText = 'Oops! Something went wrong, please try again later.';
+      document.getElementById('statusModal').style.display = 'block';
+
+      // Close the modal automatically after 3 seconds
+      setTimeout(function() {
+        document.getElementById('statusModal').style.display = 'none';
+      }, 3000);
     });
 });
 
-
-// JavaScript to control the gallery functionality
-// Function to move to the next or previous image//
-let currentIndex = 0;
-const images = document.querySelectorAll('.gallery-slide img');
-const totalImages = images.length;
-const gallerySlide = document.querySelector('.gallery-slide');
-const galleryContainer = document.querySelector('.gallery-container');
-
-// Set the width of .gallery-slide based on the number of images
-// gallerySlide.style.width = `${totalImages * 100}%`;  // Total width for all images
-
-// Event listeners for the buttons
-document.querySelector('.prev').addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
-  updateGallery();
+// Close the status popup manually when the close button is clicked
+document.getElementById('closeStatusModal').addEventListener('click', function() {
+  document.getElementById('statusModal').style.display = 'none';
 });
 
-document.querySelector('.next').addEventListener('click', () => {
-  currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
-  updateGallery();
-});
-
-// Function to update the gallery
-function updateGallery() {
-  gallerySlide.style.transform = `translateX(-${currentIndex * galleryContainer.offsetWidth}px)`;  // Move the gallery by container width
-}
