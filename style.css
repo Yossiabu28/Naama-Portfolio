@@ -1,6 +1,4 @@
-/* (Styling) This file will style your website. */
-
-
+/*-----------------------------------------------------------------General---------------------------------------------------*/
 
 /* General Reset */
 *{
@@ -9,13 +7,16 @@
   }
 
   body {
-      /*font-family: 'Satisfy','sans-serif';  Font style */
-      font-family: Arial, sans-serif; 
-      background-color: #000000;
-      justify-content: space-between;    /* Space between sections */
-      color: #333;
-      display: flex;
-      flex-direction: column;
+    /*font-family: 'Satisfy','sans-serif';  Font style */
+    font-family: Arial, sans-serif; 
+    background-color: #000000;
+    justify-content: space-between;    /* Space between sections */
+    color: #333;
+  }
+    
+  /* Apply the style for h1, h2, h3 */
+  h2, h3 {
+    padding: 1px; /* Add padding around the text */
   }
 
   header {
@@ -78,7 +79,6 @@
     align-items: center; /* Vertically center the items */
   }
 
-
   /* Basic Stylish <hr> */
   hr {
     border: 0;                     /* Removes the default border */
@@ -86,141 +86,16 @@
     background-color: #646464;     /* Applies a solid color to the horizontal line */
     margin: 10px 0;                /* Adds space above and below the line */
   }
-    
+  
+  /*-----------------------------------------------------------------Index.html------------------------------------------------------------------*/
 
-  /*-----------------------------------------------------------------Video.html---------------------------------------------------*/
-
-    
-  .Video {
-    padding: 30px;
-    background-color: rgb(173, 170, 170);
-    margin: 20px;
-    border-radius: 30px; 
-  }
-
-  /*-----------------------------------------------------------------Art.html---------------------------------------------------*/
-
-
-  .Art {
-    padding: 20px;
-    background-color:  rgb(125, 125, 126);
-    margin: 20px;
-    border-radius: 8px; 
-  }
-
-  /*-----------------------------------------------------------------ConectUs.html---------------------------------------------------*/
-
-
-  /* Contact Us Form Container */
-  #contactUs {
-    width: 80%;
-    max-width: 600px;
-    max-height: fit-content;
-    margin: 30px auto;
-    padding-left:  10px;
-    font-size: 25px;
-    background-color: #bebbbb;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.911);
-  }
-
-  #contactUs h2 {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 40px;
-  }
-
-  /* Form Fields Styling */
-  input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    height: 100px;
-  }
-
-  /* Submit button styling */
-  #submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  #submit-btn:hover {
-    background-color: #45a049; /* Darker green when hovered */
-  }
-  #submit-btn:active {
-    background-color: #388e3c; /* Even darker green when clicked */
-  }
-
-  /* Status Popup Modal Styles */
-  .status-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 100px;
-  }
-
-  .status-modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 60%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .status-modal-content p {
-    font-size: 18px;
-    font-weight: bold;
-  }
-
-  .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    cursor: pointer;
-  }
-
-  .close:hover, .close:focus {
-    color: black;
-    text-decoration: none; /* Remove underline on hover/focus */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  } 
-
-
-  /* Overall Styling */
+  /* Naama Title */
   .Naama {
     margin-top: 30px; /* Add some space above the element */
     margin-left: 20px; /* Add some space to the left of the element */
     font-family: 'Arial','sans-serif'; /* Font style */
     text-align: center; /* Align text to the left */
     color: rgb(214, 122, 3); 
-  }
-
-  /* Apply the style for h1, h2, h3 */
-  h2, h3 {
-    padding: 1px; /* Add padding around the text */
   }
 
   .Naama h1 {
@@ -230,11 +105,10 @@
   .Naama h2 ,h3 {
     font-size: 2em; /* Larger font size for the heading */
     margin-bottom: 13px; /* Add some space above the element */
-
   } 
 
 
-  /* -------------------------------------------------------------------Gallery---------------------------------*/
+  /* ------------------------Gallery---------------------------------*/
   /* Gallery Container Styling */
   .gallery-container {
     text-align: center;
@@ -247,7 +121,7 @@
     width: 1000px;
     height: 600px;              /* Fixed height for the gallery */
     overflow: clip;             
-    background: #000000; /* Artistic gradient background */
+    background: #000000; 
     border: 10px solid #000000; /* Refined border to frame the gallery */
   }
 
@@ -321,7 +195,7 @@
     opacity: 0.75;
   }   
 
-  /* -------------------------------------------------------------------contace me---------------------------------*/
+  /* -------------contace Info-----------------------*/
 
  .ContactTitle {
   font-size: 50px;        /* Adjust font size for better balance */
@@ -335,7 +209,7 @@
     height: 3.2px;                   /* Sets the thickness of the horizontal line */
     background-color:rgb(214, 122, 3); /* Applies a solid color to the horizontal line */
     margin: 0 auto; /* Center the line */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 400px; /* Set the width of the line */
   }
 
@@ -348,20 +222,18 @@
     display: flex;
     justify-content: center; /* Center content horizontally */
     align-items: flex-start; /* Align content to the top */
-    height: 30vh; /* Ensures the content takes full viewport height */
+    /* height: 30vh; Ensures the content takes full viewport height */
+    margin-bottom: 50px;
   }
 
   .contaceme ul {
     list-style: none;       /* Remove default list styling */
     padding: 0;             /* Remove padding */
-    margin: 0;              /* Remove margin */
   }
   
   .contaceme li {
-    margin-bottom: 10px;    /* Add space between list items */
-    line-height: 1.8;       /* Increase line height for better readability */
+    line-height: 2.8;       /* Increase line height for better readability */
     text-align: left; /* Ensure the text is aligned to the left */
-
   }
 
   .contaceme i {
@@ -373,9 +245,133 @@
     font-weight: bold;      /* Make labels (Name, Location, etc.) bold */
   }
 
-    .contaceme li a {
-    color: rgb(214, 122, 3);
-    text-decoration: none; /* Remove the underline */
-    }
+  .contaceme li a {
+  color: rgb(214, 122, 3);
+  text-decoration: none; /* Remove the underline */
+  }
+  
+  /*-----------------------------------------------------------------Video.html------------------------------------------------------------------------------*/
+
+    
+  .Video {
+    padding: 30px;
+    background-color: rgb(173, 170, 170);
+    margin: 20px;
+    border-radius: 30px; 
+  }
+
+  /*-----------------------------------------------------------------Art.html-------------------------------------------------------------------------------*/
+
+
+  .Art {
+    padding: 20px;
+    background-color:  rgb(125, 125, 126);
+    margin: 20px;
+    border-radius: 8px; 
+  }
+
+  /*-----------------------------------------------------------------ConectUs.html--------------------------------------------------------------------------*/
+
+  /* Contact Us Form Container */
+  .contactUs {
+    margin: 100px auto 0px auto;
+    width: 480px;
+    height: 600px;
+    padding: 10px;
+    font-size: 25px;
+    background: linear-gradient(135deg, #686765, #c98c31, #525151, #c4c2c2);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.911);
+    display: flex; /* Use flexbox for easy centering */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items from the top */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .contactUs h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  /* Form Fields Styling */
+  input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  textarea {
+    height: 100px;
+  }
+
+  /* Submit button styling */
+  .contactUs button {
+    margin: 10px auto 0px auto;
+    width: 460px;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .contactUs button:hover {
+    background-color: #45a049; /* Darker green when hovered */
+  }
+  .contactUs button:active {
+    background-color: #388e3c; /* Even darker green when clicked */
+  }
+
+
+  /* Status Popup Modal Styles */
+  .status-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
+  }
+
+  .status-modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .status-modal-content p {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+  }
+
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none; /* Remove underline on hover/focus */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  } 
+
     
 
