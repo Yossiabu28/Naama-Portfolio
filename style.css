@@ -2,376 +2,376 @@
 
 /* General Reset */
 *{
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    /*font-family: 'Satisfy','sans-serif';  Font style */
-    font-family: Arial, sans-serif; 
-    background-color: #000000;
-    justify-content: space-between;    /* Space between sections */
-    color: #333;
-  }
-    
-  /* Apply the style for h1, h2, h3 */
-  h2, h3 {
-    padding: 1px; /* Add padding around the text */
-  }
-
-  header {
-    background-color: #333;
-    padding: 10px 0px; /* Add some padding for vertical spacing */
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center all items horizontally */
-    align-items: center; /* Vertically center the items */
-    flex-direction: column; /* Stack the items vertically (header title above navigation) */
-  }
-
-  /* Styling for the navigation */
-  nav {
-    background-color: #333; /* Dark background for the navigation */
-    padding: 0px 0px; /* So sme padding around the nav items */
-    display: flex; /* Use Flexbox for the navigation */
-    align-items: center; /* Vertically center the items */
-  }
-
-  /* Styling for the navigation list */
-  nav ul {
-    list-style: none; /* Remove default list styles */
-    display: flex; /* Use Flexbox to align the list items horizontally */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    align-items: center; /* Vertically center the items */
-  }
-
-  /* List item styling */
-  nav ul li {
-    align-items: center; /* Vertically center the items */
-    font-size: 22px;
-    margin: 0 20px; /* Add horizontal spacing between items */
-  }
-
-  /* Link styling */
-  nav ul li a {
-    color: rgb(214, 122, 3); /* Set the text color to white */
-    text-decoration: none; /* Remove the underline */
-    font-weight: bold; /* Make the text bold */
-  }
+body {
+  /*font-family: 'Satisfy','sans-serif';  Font style */
+  font-family: Arial, sans-serif; 
+  background-color: #000000;
+  justify-content: space-between;    /* Space between sections */
+  color: #333;
+}
   
-  nav ul :hover { /* Hover effect for the links */
-    color: rgb(125, 125, 126);   /* Change the text color on hover */
-    transform: translateY(+1.5px);       /* Lift effect */
-    margin-bottom: auto; /* Add space below the items */
-  }
+/* Apply the style for h1, h2, h3 */
+h2, h3 {
+  padding: 1px; /* Add padding around the text */
+}
 
-  footer {
-    background-color: #a09d9d;
-    color: rgb(3, 3, 3); /* Text color */
-    text-align: center; /* Center text */
-    padding: 5px;
-    font-size: 18px ; /* Larger font size */
-    position: fixed; 
-    bottom: 0;
-    width: 100%;
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Center all items horizontally */
-    align-items: center; /* Vertically center the items */
-  }
+header {
+  background-color: #333;
+  padding: 10px 0px; /* Add some padding for vertical spacing */
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center all items horizontally */
+  align-items: center; /* Vertically center the items */
+  flex-direction: column; /* Stack the items vertically (header title above navigation) */
+}
 
-  /* Basic Stylish <hr> */
-  hr {
-    border: 0;                     /* Removes the default border */
-    height: 3.2px;                   /* Sets the thickness of the horizontal line */
-    background-color: #646464;     /* Applies a solid color to the horizontal line */
-    margin: 10px 0;                /* Adds space above and below the line */
-  }
-  
-  /*-----------------------------------------------------------------Index.html------------------------------------------------------------------*/
+/* Styling for the navigation */
+nav {
+  background-color: #333; /* Dark background for the navigation */
+  padding: 0px 0px; /* So sme padding around the nav items */
+  display: flex; /* Use Flexbox for the navigation */
+  align-items: center; /* Vertically center the items */
+}
 
-  /* Naama Title */
-  .Naama {
-    margin-top: 30px; /* Add some space above the element */
-    margin-left: 20px; /* Add some space to the left of the element */
-    font-family: 'Arial','sans-serif'; /* Font style */
-    text-align: center; /* Align text to the left */
-    color: rgb(214, 122, 3); 
-  }
+/* Styling for the navigation list */
+nav ul {
+  list-style: none; /* Remove default list styles */
+  display: flex; /* Use Flexbox to align the list items horizontally */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  align-items: center; /* Vertically center the items */
+}
 
-  .Naama h1 {
-    font-size: 5em; /* Larger font size for the heading */
-  }
+/* List item styling */
+nav ul li {
+  align-items: center; /* Vertically center the items */
+  font-size: 22px;
+  margin: 0 20px; /* Add horizontal spacing between items */
+}
 
-  .Naama h2 ,h3 {
-    font-size: 2em; /* Larger font size for the heading */
-    margin-bottom: 13px; /* Add some space above the element */
-  } 
-
-
-  /* ------------------------Gallery---------------------------------*/
-  /* Gallery Container Styling */
-  .gallery-container {
-    text-align: center;
-    padding: 10px;
-    background-color: #2b2a2a;  /* Darker background for a professional look */
-    color: rgb(253, 250, 250);  /* Light text for contrast */
-    border-radius: 20px;        /* Rounded corners for the section */
-    margin: 10px auto 20px auto;          /* Center the gallery with top and bottom spacing */
-    position: relative;         /* For positioning the navigation buttons */
-    width: 1000px;
-    height: 600px;              /* Fixed height for the gallery */
-    overflow: clip;             
-    background: #000000; 
-    border: 10px solid #000000; /* Refined border to frame the gallery */
-  }
-
-  /* Image Slide Styling */
-  .gallery-slide {
-    display: flex;
-    border: 10px;
-    align-items: center;       /* Vertically center images */
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-    width: 103.5%;
-  }
-
-  .gallery-slide img {
-    object-fit: cover;  /* Ensures images fill the container without distortion */
-    width: 100%;        /* Make images take up full width of container */
-    height: 100%;       /* Make images take up full height of container */
-    align-items: center;       /* Vertically center images */
-    flex-shrink: 0;     /* Prevent images from shrinking */
-    border-radius: 0%;  /* Optional: Remove rounded corners */
-    box-shadow: 0 4px 15px rgba(68, 68, 68, 0.6); /* Shadow to add depth to the images*/
-  }
-
-  /* Style the previous button */
-  .prev {
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    background-color: rgb(0, 0, 0, 0);
-    color: black;
-    cursor: pointer;
-  }
-
-  /* Style the next button */
-  .next {
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    background-color: rgb(0, 0, 0, 0);
-    color: black;
-    cursor: pointer;
-  }
-
-  /* Stylish Arrows using Unicode */
-  .prev::before {
-    padding: auto;
-    content: '\f104';  /* FontAwesome left arrow */
-    font-family: 'Font Awesome 5 Free', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;   /* Make it bold */
-  }
-
-  .next::before {
-    padding: auto;
-    content: '\f105';  /* FontAwesome left arrow */
-    font-family: 'Font Awesome 5 Free', sans-serif;
-    font-size: 4rem;
-    font-weight: 900;   /* Make it bold */
-  }
-
-  /* Add hover effect to the buttons */
-  .prev:hover {
-    padding: 20px;
-    opacity: 0.75;
-  }
-
-  .next:hover {
-    padding: 20px;
-    opacity: 0.75;
-  }   
-
-  /* -------------contace Info-----------------------*/
-
- .ContactTitle {
-  font-size: 50px;        /* Adjust font size for better balance */
-  color:rgb(214, 122, 3);
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 5px;
-  }
-
-  .ContactTitle hr {
-    height: 3.2px;                   /* Sets the thickness of the horizontal line */
-    background-color:rgb(214, 122, 3); /* Applies a solid color to the horizontal line */
-    margin: 0 auto; /* Center the line */
-    margin-bottom: 20px;
-    width: 400px; /* Set the width of the line */
-  }
-
-
-  .contaceme {
-    color: rgb(214, 122, 3);
-    font-size: 30px;        /* Adjust font size for better balance */
-    text-align: center;     /* Center text */
-    margin: 10px;
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: flex-start; /* Align content to the top */
-    /* height: 30vh; Ensures the content takes full viewport height */
-    margin-bottom: 50px;
-  }
-
-  .contaceme ul {
-    list-style: none;       /* Remove default list styling */
-    padding: 0;             /* Remove padding */
-  }
-  
-  .contaceme li {
-    line-height: 2.8;       /* Increase line height for better readability */
-    text-align: left; /* Ensure the text is aligned to the left */
-  }
-
-  .contaceme i {
-    margin-left: 10px;
-    margin-right: 20px;  /* Adjust this value as needed */
-  }
-  
-  .contaceme li strong {
-    font-weight: bold;      /* Make labels (Name, Location, etc.) bold */
-  }
-
-  .contaceme li a {
-  color: rgb(214, 122, 3);
+/* Link styling */
+nav ul li a {
+  color: rgb(214, 122, 3); /* Set the text color to white */
   text-decoration: none; /* Remove the underline */
-  }
+  font-weight: bold; /* Make the text bold */
+}
+
+nav ul :hover { /* Hover effect for the links */
+  color: rgb(125, 125, 126);   /* Change the text color on hover */
+  transform: translateY(+1.5px);       /* Lift effect */
+  margin-bottom: auto; /* Add space below the items */
+}
+
+footer {
+  background-color: #a09d9d;
+  color: rgb(3, 3, 3); /* Text color */
+  text-align: center; /* Center text */
+  padding: 5px;
+  font-size: 18px ; /* Larger font size */
+  position: fixed; 
+  bottom: 0;
+  width: 100%;
+  display: flex; /* Enable Flexbox */
+  justify-content: center; /* Center all items horizontally */
+  align-items: center; /* Vertically center the items */
+}
+
+/* Basic Stylish <hr> */
+hr {
+  border: 0;                     /* Removes the default border */
+  height: 3.2px;                   /* Sets the thickness of the horizontal line */
+  background-color: #646464;     /* Applies a solid color to the horizontal line */
+  margin: 10px 0;                /* Adds space above and below the line */
+}
+
+/*-----------------------------------------------------------------Index.html------------------------------------------------------------------*/
+
+/* Naama Title */
+.Naama {
+  margin-top: 30px; /* Add some space above the element */
+  margin-left: 20px; /* Add some space to the left of the element */
+  font-family: 'Arial','sans-serif'; /* Font style */
+  text-align: center; /* Align text to the left */
+  color: rgb(214, 122, 3); 
+}
+
+.Naama h1 {
+  font-size: 5em; /* Larger font size for the heading */
+}
+
+.Naama h2 ,h3 {
+  font-size: 2em; /* Larger font size for the heading */
+  margin-bottom: 13px; /* Add some space above the element */
+} 
+
+
+/* ------------------------Gallery---------------------------------*/
+/* Gallery Container Styling */
+.gallery-container {
+  text-align: center;
+  padding: 10px;
+  background-color: #2b2a2a;  /* Darker background for a professional look */
+  color: rgb(253, 250, 250);  /* Light text for contrast */
+  border-radius: 20px;        /* Rounded corners for the section */
+  margin: 10px auto 20px auto;          /* Center the gallery with top and bottom spacing */
+  position: relative;         /* For positioning the navigation buttons */
+  width: 1000px;
+  height: 600px;              /* Fixed height for the gallery */
+  overflow: clip;             
+  background: #000000; 
+  border: 10px solid #000000; /* Refined border to frame the gallery */
+}
+
+/* Image Slide Styling */
+.gallery-slide {
+  display: flex;
+  border: 10px;
+  align-items: center;       /* Vertically center images */
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+  width: 103.5%;
+}
+
+.gallery-slide img {
+  object-fit: cover;  /* Ensures images fill the container without distortion */
+  width: 100%;        /* Make images take up full width of container */
+  height: 100%;       /* Make images take up full height of container */
+  align-items: center;       /* Vertically center images */
+  flex-shrink: 0;     /* Prevent images from shrinking */
+  border-radius: 0%;  /* Optional: Remove rounded corners */
+  box-shadow: 0 4px 15px rgba(68, 68, 68, 0.6); /* Shadow to add depth to the images*/
+}
+
+/* Style the previous button */
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: rgb(0, 0, 0, 0);
+  color: black;
+  cursor: pointer;
+}
+
+/* Style the next button */
+.next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgb(0, 0, 0, 0);
+  color: black;
+  cursor: pointer;
+}
+
+/* Stylish Arrows using Unicode */
+.prev::before {
+  padding: auto;
+  content: '\f104';  /* FontAwesome left arrow */
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;   /* Make it bold */
+}
+
+.next::before {
+  padding: auto;
+  content: '\f105';  /* FontAwesome left arrow */
+  font-family: 'Font Awesome 5 Free', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;   /* Make it bold */
+}
+
+/* Add hover effect to the buttons */
+.prev:hover {
+  padding: 20px;
+  opacity: 0.75;
+}
+
+.next:hover {
+  padding: 20px;
+  opacity: 0.75;
+}   
+
+/* -------------contace Info-----------------------*/
+
+.ContactTitle {
+font-size: 50px;        /* Adjust font size for better balance */
+color:rgb(214, 122, 3);
+text-align: center;
+margin-top: 80px;
+margin-bottom: 5px;
+}
+
+.ContactTitle hr {
+  height: 3.2px;                   /* Sets the thickness of the horizontal line */
+  background-color:rgb(214, 122, 3); /* Applies a solid color to the horizontal line */
+  margin: 0 auto; /* Center the line */
+  margin-bottom: 20px;
+  width: 400px; /* Set the width of the line */
+}
+
+
+.contaceme {
+  color: rgb(214, 122, 3);
+  font-size: 30px;        /* Adjust font size for better balance */
+  text-align: center;     /* Center text */
+  margin: 10px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: flex-start; /* Align content to the top */
+  /* height: 30vh; Ensures the content takes full viewport height */
+  margin-bottom: 50px;
+}
+
+.contaceme ul {
+  list-style: none;       /* Remove default list styling */
+  padding: 0;             /* Remove padding */
+}
+
+.contaceme li {
+  line-height: 2.8;       /* Increase line height for better readability */
+  text-align: left; /* Ensure the text is aligned to the left */
+}
+
+.contaceme i {
+  margin-left: 10px;
+  margin-right: 20px;  /* Adjust this value as needed */
+}
+
+.contaceme li strong {
+  font-weight: bold;      /* Make labels (Name, Location, etc.) bold */
+}
+
+.contaceme li a {
+color: rgb(214, 122, 3);
+text-decoration: none; /* Remove the underline */
+}
+
+/*-----------------------------------------------------------------Video.html------------------------------------------------------------------------------*/
+
   
-  /*-----------------------------------------------------------------Video.html------------------------------------------------------------------------------*/
+.Video {
+  padding: 30px;
+  background-color: rgb(173, 170, 170);
+  margin: 20px;
+  border-radius: 30px; 
+}
 
-    
-  .Video {
-    padding: 30px;
-    background-color: rgb(173, 170, 170);
-    margin: 20px;
-    border-radius: 30px; 
-  }
-
-  /*-----------------------------------------------------------------Art.html-------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------Art.html-------------------------------------------------------------------------------*/
 
 
-  .Art {
-    padding: 20px;
-    background-color:  rgb(125, 125, 126);
-    margin: 20px;
-    border-radius: 8px; 
-  }
+.Art {
+  padding: 20px;
+  background-color:  rgb(125, 125, 126);
+  margin: 20px;
+  border-radius: 8px; 
+}
 
-  /*-----------------------------------------------------------------ConectUs.html--------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------ConectUs.html--------------------------------------------------------------------------*/
 
-  /* Contact Us Form Container */
-  .contactUs {
-    margin: 100px auto 0px auto;
-    width: 480px;
-    height: 600px;
-    padding: 10px;
-    font-size: 25px;
-    background: linear-gradient(135deg, #686765, #c98c31, #525151, #c4c2c2);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.911);
-    display: flex; /* Use flexbox for easy centering */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: flex-start; /* Align items from the top */
-    align-items: center; /* Center items horizontally */
-  }
+/* Contact Us Form Container */
+.contactUs {
+  margin: 100px auto 0px auto;
+  width: 480px;
+  height: 600px;
+  padding: 10px;
+  font-size: 25px;
+  background: linear-gradient(135deg, #686765, #c98c31, #525151, #c4c2c2);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.911);
+  display: flex; /* Use flexbox for easy centering */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Align items from the top */
+  align-items: center; /* Center items horizontally */
+}
 
-  .contactUs h2 {
-    padding-top: 20px;
-    text-align: center;
-    font-size: 40px;
-  }
+.contactUs h2 {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 40px;
+}
 
-  /* Form Fields Styling */
-  input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 2px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  textarea {
-    height: 100px;
-  }
+/* Form Fields Styling */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 2px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea {
+  height: 100px;
+}
 
-  /* Submit button styling */
-  .contactUs button {
-    margin: 10px auto 0px auto;
-    width: 460px;
-    padding: 10px;
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+/* Submit button styling */
+.contactUs button {
+  margin: 10px auto 0px auto;
+  width: 460px;
+  padding: 10px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .contactUs button:hover {
-    background-color: #45a049; /* Darker green when hovered */
-  }
-  .contactUs button:active {
-    background-color: #388e3c; /* Even darker green when clicked */
-  }
+.contactUs button:hover {
+  background-color: #45a049; /* Darker green when hovered */
+}
+.contactUs button:active {
+  background-color: #388e3c; /* Even darker green when clicked */
+}
 
 
-  /* Status Popup Modal Styles */
-  .status-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 100px;
-  }
+/* Status Popup Modal Styles */
+.status-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 100px;
+}
 
-  .status-modal-content {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    border-radius: 8px;
-    width: 60%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
+.status-modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
-  .status-modal-content p {
-    font-size: 18px;
-    font-weight: bold;
-  }
+.status-modal-content p {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-  .close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    cursor: pointer;
-  }
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+}
 
-  .close:hover, .close:focus {
-    color: black;
-    text-decoration: none; /* Remove underline on hover/focus */
-    cursor: pointer; /* Change cursor to pointer on hover */
-  } 
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none; /* Remove underline on hover/focus */
+  cursor: pointer; /* Change cursor to pointer on hover */
+} 
 
-    
+  
 
